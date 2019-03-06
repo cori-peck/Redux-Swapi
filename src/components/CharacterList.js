@@ -2,6 +2,7 @@ import React from "react";
 
 import Character from "./Character";
 
+
 const CharacterList = props => {
   return (
     <ul>
@@ -11,5 +12,6 @@ const CharacterList = props => {
     </ul>
   );
 };
+
 
 export default CharacterList;
