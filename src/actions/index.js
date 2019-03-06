@@ -15,8 +15,8 @@ export const getCharacter = () => dispatch => {
     dispatch({ type: FETCH_CHARACTER_START });
     axios
         .get('https://swapi.co/api/people/')
-        .then(res => {
-            dispatch({ type: FETCH_CHARACTER_SUCCESS, payload: res.data });
+        .then( ({ data }) => {
+            dispatch({ type: FETCH_CHARACTER_SUCCESS, payload: data.results });
         })
         .catch(err => {
             dispatch({
